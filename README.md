@@ -18,9 +18,23 @@ To write a program to perform selection sort and insertion sort using python pro
 4.	Break the loop and insert X.
 5.	Repeat the steps 2 to 4 for sorting all the elements in the array.
 ## Program:
-i)	#Selection Sort
+i)	
 ```
-
+Program to sort the elements in the list using the Selection Sort algorithm.
+Developed by: GOKUL PRAKASH M
+RegisterNumber: 23013924
+'''
+def selection_sort(nums):
+    for i in range(1,len(nums)):
+        item_to_insert=nums[i]
+        j=i-1
+        while j>=0 and nums[j]>item_to_insert:
+          nums[j+1]=nums[j]
+          j-=1
+        nums[j+1]=item_to_insert
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 
 
 
@@ -28,7 +42,17 @@ i)	#Selection Sort
 ```
 ii)	#Insertion Sort
 ```
+def selection_sort(nums):
+    for i in range(len(nums)):
+        lowest_value_index = i
+        for j in range(i+1, len(nums)):
+            if nums[j] < nums[lowest_value_index]:
+                lowest_value_index = j
+        nums[i], nums[lowest_value_index] = nums[lowest_value_index], nums[i]
 
+list_of_nums = eval(input())
+selection_sort(list_of_nums)
+print(list_of_nums)
 
 
 
@@ -37,6 +61,9 @@ ii)	#Insertion Sort
 ```
 
 ## Output:
+![image](https://github.com/gokulprakash23013924/Sorting-Algorithm/assets/150231472/ed5143e1-ab18-48b6-bfe7-2710318115b9)
+![image](https://github.com/gokulprakash23013924/Sorting-Algorithm/assets/150231472/23806f68-e5ad-4e25-8416-907393945e8a)
+
 
 
 ## Result:
